@@ -1,0 +1,50 @@
+{
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Profesor 1",
+      "usuario": "usuario1",
+      "contraseña": "contraseña1",
+      "cursos": [
+        {
+          "id": 2,
+          "nombre": "1° basico",
+          "secciones": []
+        },
+        {
+          "id": 3,
+          "nombre": "2° basico",
+          "secciones": []
+        },
+        {
+          "id": 4,
+          "nombre": "3° básico",
+          "secciones": []
+        },
+        {
+          "id": 5,
+          "nombre": "4° básico",
+          "secciones": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Profesor 2",
+      "usuario": "usuario2",
+      "contraseña": "contraseña2",
+      "cursos": [
+        {
+          "id": 1,
+          "nombre": "2° basico",
+          "secciones": []
+        },
+        {
+          "id": 3,
+          "nombre": "3° básico",
+          "secciones": []
+        }
+      ]
+    }
+  ]
+}

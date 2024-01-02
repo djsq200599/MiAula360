@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cursos del Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Comprueba si 'profesor' está definido antes de acceder a sus propiedades -->
+  <ng-container *ngIf="profesor">
+    <!-- Lista de cursos existentes -->
+    <ion-list>
+      <ion-list-header>
+        Cursos Actuales
+      </ion-list-header>
+      <ion-item *ngFor="let curso of profesor.cursos">
+        {{ curso.nombre }}
+        <!-- Puedes agregar más detalles aquí si es necesario -->
+      </ion-item>
+    </ion-list>
+  </ng-container>
+
+  <!-- Botón para mostrar el formulario de agregar curso -->
+  <ion-button (click)="mostrarFormularioAgregarCurso()">Agregar Curso</ion-button>
+
+  <!-- Formulario para agregar un nuevo curso -->
+  <ion-item *ngIf="mostrandoFormulario">
+    <form [formGroup]="formularioCurso" (ngSubmit)="agregarCurso()">
+      <ion-item>
+        <ion-label position="floating">Nombre del Curso</ion-label>
+        <ion-input formControlName="nombre" type="text"></ion-input>
+      </ion-item>
+
+      <!-- Aquí puedes agregar los detalles para las secciones si es necesario -->
+
+      <ion-button expand="full" type="submit" [disabled]="!formularioCurso.valid">Guardar Curso</ion-button>
+    </form>
+  </ion-item>
+</ion-content>
